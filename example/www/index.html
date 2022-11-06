@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Real-Time Monitoring</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sarabun&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script type="application/javascript" src="https://momentjs.com/downloads/moment.js"></script>
+</head>
+<body>
+<div id="navbar">
+    <form action="/action_page.php">
+        <b>DEVICE: </b>
+        <input type="checkbox" id="device1" class="device_checkbox" name="device" value="111111-1111">
+        <label for="device1"> Device 1</label>
+        <input type="checkbox" id="device2" class="device_checkbox" name="device" value="222222-2222">
+        <label for="device2"> Device 2</label>
+        <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+        <b>Employee: </b>
+        <input type="checkbox" id="employee1" class="employee_checkbox" name="employee" value="AAAAAA-111111">
+        <label for="employee1"> (1) เอ็ดดาร์ด สตาร์ค</label>
+        <input type="checkbox" id="employee2" class="employee_checkbox" name="employee" value="BBBBBB-222222">
+        <label for="employee2"> (2) จอน สโนว</label>
+        <input type="checkbox" id="employee3" class="employee_checkbox" name="employee" value="CCCCCC-333333">
+        <label for="employee3"> (3) แดเนริส ทาแกเรียน</label>
+        <input type="checkbox" id="employee4" class="employee_checkbox" name="employee" value="DDDDDD-444444">
+        <label for="employee4"> (4) เจมี่ แลนนิสเตอร์</label>
+        <input type="checkbox" id="employee5" class="employee_checkbox" name="employee" value="EEEEEE-555555">
+        <label for="employee5"> (5) ปีเตอร์ เบลิช</label>
+        <button id="subscribe_btn">SUBSCRIBE</button>
+        <button id="unsubscribe_btn">UNSUBSCRIBE</button>
+    </form>
+</div>
+<div id="body_wrap">
+    <table>
+        <thead>
+        <tr>
+            <th>วันที่</th>
+            <th>เวลา</th>
+            <th>Device</th>
+            <th>รูป</th>
+            <th>ID</th>
+            <th>ชื่อ</th>
+        </tr>
+        </thead>
+        <tbody id="table_body">
+        </tbody>
+    </table>
+</div>
+<script type="application/javascript" src="script.js"></script>
+</body>
+</html>
