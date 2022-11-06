@@ -24,7 +24,7 @@ func TestAMQPPublisher_Publish_Random_Device1(t *testing.T) {
 
 	bPayload, _ := json.Marshal(txn)
 
-	err := gorealtime.NewAMQPPublisher("amqp://guest:guest@localhost:5672/realtime", "test").
+	err := gorealtime.NewAMQPPublisher("amqp://guest:guest@localhost:5672", "test").
 		Publish(
 			"transaction",
 			string(bPayload),
@@ -42,7 +42,7 @@ func TestAMQPPublisher_Publish_Random_Device2(t *testing.T) {
 
 	bPayload, _ := json.Marshal(txn)
 
-	err := gorealtime.NewAMQPPublisher("amqp://guest:guest@localhost:5672/realtime", "test").
+	err := gorealtime.NewAMQPPublisher("amqp://guest:guest@localhost:5672", "test").
 		Publish(
 			"transaction",
 			string(bPayload),
@@ -61,7 +61,7 @@ func TestAMQPPublisher_Publish_Device1_EddardStark(t *testing.T) {
 
 	bPayload, _ := json.Marshal(txn)
 
-	err := gorealtime.NewAMQPPublisher("amqp://guest:guest@localhost:5672/realtime", "test").
+	err := gorealtime.NewAMQPPublisher("amqp://guest:guest@localhost:5672", "test").
 		Publish(
 			"transaction",
 			string(bPayload),
@@ -78,7 +78,7 @@ func TestAMQPPublisher_Publish_Device1_JonSnow(t *testing.T) {
 
 	bPayload, _ := json.Marshal(txn)
 
-	err := gorealtime.NewAMQPPublisher("amqp://guest:guest@localhost:5672/realtime", "test").
+	err := gorealtime.NewAMQPPublisher("amqp://guest:guest@localhost:5672", "test").
 		Publish(
 			"transaction",
 			string(bPayload),
@@ -95,7 +95,7 @@ func TestAMQPPublisher_Publish_Device1_DaenerysTargaryen(t *testing.T) {
 
 	bPayload, _ := json.Marshal(txn)
 
-	err := gorealtime.NewAMQPPublisher("amqp://guest:guest@localhost:5672/realtime", "test").
+	err := gorealtime.NewAMQPPublisher("amqp://guest:guest@localhost:5672", "test").
 		Publish(
 			"transaction",
 			string(bPayload),
@@ -112,7 +112,7 @@ func TestAMQPPublisher_Publish_Device1_JaimeLannister(t *testing.T) {
 
 	bPayload, _ := json.Marshal(txn)
 
-	err := gorealtime.NewAMQPPublisher("amqp://guest:guest@localhost:5672/realtime", "test").
+	err := gorealtime.NewAMQPPublisher("amqp://guest:guest@localhost:5672", "test").
 		Publish(
 			"transaction",
 			string(bPayload),
@@ -129,7 +129,7 @@ func TestAMQPPublisher_Publish_Device1_PetyrBaelish(t *testing.T) {
 
 	bPayload, _ := json.Marshal(txn)
 
-	err := gorealtime.NewAMQPPublisher("amqp://guest:guest@localhost:5672/realtime", "test").
+	err := gorealtime.NewAMQPPublisher("amqp://guest:guest@localhost:5672", "test").
 		Publish(
 			"transaction",
 			string(bPayload),
@@ -148,7 +148,7 @@ func TestAMQPPublisher_Publish_Device2_EddardStark(t *testing.T) {
 
 	bPayload, _ := json.Marshal(txn)
 
-	err := gorealtime.NewAMQPPublisher("amqp://guest:guest@localhost:5672/realtime", "test").
+	err := gorealtime.NewAMQPPublisher("amqp://guest:guest@localhost:5672", "test").
 		Publish(
 			"transaction",
 			string(bPayload),
@@ -165,7 +165,7 @@ func TestAMQPPublisher_Publish_Device2_JonSnow(t *testing.T) {
 
 	bPayload, _ := json.Marshal(txn)
 
-	err := gorealtime.NewAMQPPublisher("amqp://guest:guest@localhost:5672/realtime", "test").
+	err := gorealtime.NewAMQPPublisher("amqp://guest:guest@localhost:5672", "test").
 		Publish(
 			"transaction",
 			string(bPayload),
@@ -182,7 +182,7 @@ func TestAMQPPublisher_Publish_Device2_DaenerysTargaryen(t *testing.T) {
 
 	bPayload, _ := json.Marshal(txn)
 
-	err := gorealtime.NewAMQPPublisher("amqp://guest:guest@localhost:5672/realtime", "test").
+	err := gorealtime.NewAMQPPublisher("amqp://guest:guest@localhost:5672", "test").
 		Publish(
 			"transaction",
 			string(bPayload),
@@ -199,7 +199,7 @@ func TestAMQPPublisher_Publish_Device2_JaimeLannister(t *testing.T) {
 
 	bPayload, _ := json.Marshal(txn)
 
-	err := gorealtime.NewAMQPPublisher("amqp://guest:guest@localhost:5672/realtime", "test").
+	err := gorealtime.NewAMQPPublisher("amqp://guest:guest@localhost:5672", "test").
 		Publish(
 			"transaction",
 			string(bPayload),
@@ -216,7 +216,7 @@ func TestAMQPPublisher_Publish_Device2_PetyrBaelish(t *testing.T) {
 
 	bPayload, _ := json.Marshal(txn)
 
-	err := gorealtime.NewAMQPPublisher("amqp://guest:guest@localhost:5672/realtime", "test").
+	err := gorealtime.NewAMQPPublisher("amqp://guest:guest@localhost:5672", "test").
 		Publish(
 			"transaction",
 			string(bPayload),
