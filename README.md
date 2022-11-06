@@ -34,7 +34,7 @@ docker run -d --restart always --name rabbitmq --hostname docker-rabbitmq -p 567
 ### (2.2) ตัวอย่างการ Run เพื่อทดสอบ
 
 ```shell
-REALTIME_AMQP_ENDPOINT="amqp://guest:guest@localhost:5672" REALTIME_PORT="80" go run application.go
+REALTIME_AMQP_ENDPOINT="amqp://guest:guest@localhost:5672" REALTIME_PORT="8080" go run application.go
 ```
 
 ## 3. ตัวอย่าง Website ที่ใช้งาน Realtime Service
