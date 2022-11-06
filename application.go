@@ -45,6 +45,9 @@ func realtimeSubscribe(w http.ResponseWriter, r *http.Request) {
 		log.Printf("[subscriber: %s] closed & destroyed realtimeSubscribe(w,r) request handler func \n", subscriberID)
 	}()
 
+	ticker := time.NewTicker(15 * time.Second)
+	defer ticker.Stop()
+
 	c, err := upgrader.Upgrade(w, r, nil)
 	if err != nil {
 		log.Print("upgrade:", err)
@@ -100,6 +103,12 @@ loop:
 		case returnData := <-ch:
 			log.Printf("[subscriber: %s] got data from subscriber : \n%v \n", subscriberID, returnData)
 			_ = c.WriteJSON(returnData)
+
+		case <-ticker.C:
+			err = c.WriteMessage(websocket.PingMessage, nil)
+			if err != nil {
+				log.Printf("[subscriber: %s] ws sent ping err : %v \n", subscriberID, err)
+			}
 
 		case <-stop:
 			cancel()
